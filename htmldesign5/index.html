@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form Design - With Password Strength</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Include Font Awesome 6 stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" />
+</head>
+<body>
+  <form>
+    <img src="./images/Sample_User_Icon.png" />
+    <div class="input-box">
+      <span><i class="far fa-user"></i></span>
+      <input type="text" placeholder="User name" required />
+    </div>
+    <div class="input-box">
+      <span><i class="far fa-envelope"></i></span>
+      <input type="email" placeholder="Email" required />
+    </div>
+    <div class="input-box">
+      <span><i class="far fa-key"></i></span>
+      <input type="password" id="password" placeholder="Password" required />
+    </div>
+    <button type="submit"><i class="fa fa-sign-in"></i>Submit</button>
+  </form>
+
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- Include password strength script -->
+  <script src="./jquery.passwordstrength.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      // Check if passwordStrength function is available
+      if ($.fn.passwordStrength) {
+        $("#password").passwordStrength();
+      } else {
+        console.error("passwordStrength function is not available.");
+      }
+    });
+  </script>
+</body>
+</html>
