@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mouse movement effect</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="drone-box">
+        <img src="./image/drone.png" class="drone-pic" />
+        <img src="./image/drone-left.png" class="drone-left" />
+        <img src="./image/drone-right.png" class="drone-right" />
+      </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#banner").mousemove(function (e) {
+                var moveX = e.pageX - $(this).offset().left - ($("#drone-box").width() / 2);
+                var moveY = e.pageY - $(this).offset().top - ($("#drone-box").height() / 2);
+                $("#drone-box").css({
+                    transform: "translate(" + moveX + "px, " + moveY + "px)",
+                });
+            });
+        });
+    </script>
+  </body>
+</html>
