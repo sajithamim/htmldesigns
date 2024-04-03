@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation easy tutorials</title>
+    <link rel="stylesheet" href="./styles.css" />
+    
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+          <nav>
+            <div class="logo">
+              <img src="./images/logo.png" alt="logo"/>
+            </div>
+            <div class="nav-link">
+              <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </div>
+            <div class="menu-icon">
+              <img src="images/menu.png" alt=""menu />
+            </div>
+          </nav>
+      </div>
+
+      <div class="content">
+        <div class="social-icons">
+          <img src="./images/instagram.png" alt="insta"/>
+          <img src="./images/facebook.png" alt="insta"/>
+          <img src="./images/youtube.png" alt="insta"/>
+          <img src="./images/twitter.png" alt="insta"/>
+        </div>
+        <div class="search-box">
+          <input name="search" placeholder="Search" />
+          <img src="./images/search.png" alt="search"/>
+        </div>
+      </div>
+
+      <img src="./images/cloud.png" alt="cloud" id="clouds"/>
+      <img src="./images/plane.png" alt="cloud" id="airplane"/>
+
+      <div id="hotairbaloon">
+          <img src="./images/balloon.png" alt="baloon" class="balloon1" />
+          <img src="./images/balloon.png" alt="baloon" class="balloon2" />
+          <img src="./images/balloon.png" alt="baloon" class="balloon3" />
+      </div>
+
+      <img src="./images/pause.png" alt="play" id="myimg" />
+    </div>
+    
+    <script>
+      var myImg = document.getElementById("myImg");
+      var clouds = document.getElementById("clouds");
+      var hotairbaloon = document.getElementById("hotairbaloon");
+      var airplane = document.getElementById("airplane");
+    
+      myImg.onclick = function(){
+        if(clouds.style.webkitAnimationPlayState === 'paused'){
+          clouds.style.webkitAnimationPlayState = 'running';
+          hotairbaloon.style.webkitAnimationPlayState = 'running';
+          airplane.style.webkitAnimationPlayState = 'running';
+          myImg.src="./images/pause.png"
+        }else{
+          clouds.style.webkitAnimationPlayState = 'paused';
+          hotairbaloon.style.webkitAnimationPlayState = 'paused';
+          airplane.style.webkitAnimationPlayState = 'paused';
+          myImg.src="./images/play.png"
+        }
+      }
+    </script>
+  </body>
+</html>
