@@ -47,15 +47,15 @@ body {
     transition: 500ms;
 }
 
-.container nav .list{
+.container nav .list {
     height: 100%;
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.container nav .list ul{
-    width:100%;
+.container nav .list ul {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: left;
@@ -63,8 +63,8 @@ body {
     margin-right: 30px;
 }
 
-.container nav .list ul li{
-    width:100px;
+.container nav .list ul li {
+    width: 100px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -75,53 +75,53 @@ body {
     margin-left: 5px;
 }
 
-.container nav .list ul li a{
-   text-decoration: none;
-   color: #fff;
-   font-size: 18px;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   font-weight: 600;
-   transition: 500ms;
+.container nav .list ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    transition: 500ms;
 }
 
 .container nav .list ul .active a,
-.container nav .list ul li:hover a{
+.container nav .list ul li:hover a {
     color: #4beaff;
     transition: 500ms;
 }
 
-.container nav .search{
-    height:100%;
+.container nav .search {
+    height: 100%;
     display: flex;
     justify-content: left;
     align-items: center;
     margin-right: 50px;
- }
+}
 
- .container nav .search input{
-   width: 300px;
-   height:40px;
-   background: transparent;
-   color: #fff;
-   font-size: 16px;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   font-weight: 600;
-   border: 1px solid #4beaff;
-   border-top-left-radius: 5px;
-   border-bottom-left-radius: 5px;
-   padding: 10px;
-   outline: none;
- }
-
- .container nav .search input::placeholder{
+.container nav .search input {
+    width: 300px;
+    height: 40px;
+    background: transparent;
     color: #fff;
- }
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border: 1px solid #4beaff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
 
- .container nav .search i{
+.container nav .search input::placeholder {
+    color: #fff;
+}
+
+.container nav .search i {
     width: 40px;
     height: 40px;
     background: #4beaff;
-    color:#fff;
+    color: #fff;
     font-size: 22px;
     display: flex;
     justify-content: center;
@@ -130,13 +130,14 @@ body {
     border-bottom-right-radius: 5px;
     cursor: pointer;
     transition: 500ms;
- }
- .container nav .search i:hover {
+}
+
+.container nav .search i:hover {
     color: #4beaff;
     transition: 500ms;
 }
 
-.content{
+.content {
     width: 80%;
     height: 80%;
     display: flex;
@@ -147,7 +148,7 @@ body {
     border-radius: 25px;
 }
 
-.content .left{
+.content .left {
     width: 65%;
     height: 100%;
     display: flex;
@@ -156,13 +157,185 @@ body {
     align-items: center;
 }
 
-.content .left h1{
+.content .left h1 {
     width: 80%;
-    color:#fff;
-   font-size: 48px;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   font-weight: 1000;
-   letter-spacing: .05em;
-   margin-top: -20px;
-   
+    color: #fff;
+    font-size: 48px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 1000;
+    letter-spacing: .05em;
+    margin-top: -20px;
+}
+
+.content .left p {
+    width: 80%;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-top: -20px;
+}
+
+.content .left .btns {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -50px;
+}
+
+.content .left button {
+    width: 45%;
+    height: 60px;
+    border: 2px solid #4beaff;
+    border-radius: 10px;
+    background: #4beaff;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 600ms;
+}
+
+
+.content .right {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content form {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #4beaff;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.right form input {
+    width: 80%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    transition: 500ms;
+}
+
+.right form input::placeholder {
+    color: #fff;
+
+}
+
+.right form .username,
+.right form .password {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right form .username i,
+.right form .password i {
+    color: #fff;
+    margin-left: -15px;
+}
+
+.right form button {
+    width: 80%;
+    height: 40px;
+    background: #4beaff;
+    border: 1px solid #4beaff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 500ms;
+    margin-top: 10px;
+}
+
+.right form button:hover {
+    background: transparent;
+    transition: 500ms;
+}
+
+.right form .more {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right form .more p {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.right form .more p a {
+    color: #4beaff;
+    transition: 500ms;
+}
+
+.right form .more p a:hover {
+    color: #4beaff;
+    transition: 500ms;
+}
+
+.right form .socials {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right form .socials p {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+.right form .socials ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.right form .socials ul li {
+    list-style-type: none;
+    margin: 0;
+}
+
+.right form .socials ul li i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 26px !important;
+    transition: 500ms;
+}
+
+.right form .socials ul li i:hover {
+    color: #fff;
+
+    transition: 500ms;
 }
